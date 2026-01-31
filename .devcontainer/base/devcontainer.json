@@ -1,0 +1,27 @@
+{
+    "name": "AXIAL Profile A (Base)",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "remoteUser": "axial",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "tauri-apps.tauri-vscode",
+                "vue.volar",
+                "dbaeumer.vscode-eslint",
+                "tamasfe.even-better-toml",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {
+            "configureZsh": true
+        }
+    },
+    "forwardPorts": [1420, 11434, 3000, 8080],
+    "postCreateCommand": "scripts/post-create.sh"
+}

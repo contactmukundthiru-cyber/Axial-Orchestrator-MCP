@@ -1,0 +1,14 @@
+[package]
+name = "axial-perception"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+tree-sitter.workspace = true
+tree-sitter-rust.workspace = true
+tree-sitter-python.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+walkdir.workspace = true
+grep.workspace = true

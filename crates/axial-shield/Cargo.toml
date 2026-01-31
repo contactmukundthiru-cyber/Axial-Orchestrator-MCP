@@ -1,0 +1,16 @@
+[package]
+name = "axial-shield"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+axial-core = { path = "../axial-core" }
+serde_json.workspace = true
+anyhow.workspace = true
+tokio.workspace = true
+regex = "1.10"
+axum = { version = "0.7", features = ["macros"] }
+tower = "0.4"
+hyper = { version = "1.0", features = ["full"] }
+http-body-util = "0.1"
+hyper-util = { version = "0.1", features = ["full"] }

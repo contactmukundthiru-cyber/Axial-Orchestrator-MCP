@@ -1,0 +1,14 @@
+[package]
+name = "axial-isolate"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+bollard = "0.15"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+caps = "0.5"

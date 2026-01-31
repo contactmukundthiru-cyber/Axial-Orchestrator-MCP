@@ -1,0 +1,23 @@
+{
+    "name": "AXIAL Profile D (Forensic)",
+    "build": {
+        "dockerfile": "../base/Dockerfile",
+        "context": ".."
+    },
+    "remoteUser": "axial",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {
+            "configureZsh": true
+        }
+    },
+    // No outbound network allowed in forensic mode (simulated via empty forward)
+    "forwardPorts": [],
+    "postCreateCommand": "scripts/setup-forensic.sh"
+}

@@ -1,0 +1,17 @@
+[package]
+name = "axial-router"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+axial-core = { path = "../axial-core" }
+axial-cli-harness = { path = "../axial-cli-harness" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tokio.workspace = true
+reqwest.workspace = true
+async-trait = "0.1"
+governor = "0.6"

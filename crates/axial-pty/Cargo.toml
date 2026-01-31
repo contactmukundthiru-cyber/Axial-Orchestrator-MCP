@@ -1,0 +1,12 @@
+[package]
+name = "axial-pty"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+axial-core = { path = "../axial-core" }
+anyhow.workspace = true
+tokio.workspace = true
+uuid.workspace = true
+nix = { version = "0.28", features = ["term", "process", "signal"] }
+portable-pty = "0.8"

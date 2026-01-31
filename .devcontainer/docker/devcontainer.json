@@ -1,0 +1,28 @@
+{
+    "name": "AXIAL Profile B (Docker)",
+    "build": {
+        "dockerfile": "../base/Dockerfile",
+        "context": ".."
+    },
+    "remoteUser": "axial",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version": "latest",
+            "moby": true
+        }
+    },
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "ms-azuretools.vscode-docker",
+                "tauri-apps.tauri-vscode"
+            ]
+        }
+    },
+    "forwardPorts": [1420, 11434, 3000, 8080],
+    "postCreateCommand": "scripts/post-create.sh"
+}

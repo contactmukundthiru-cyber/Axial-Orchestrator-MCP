@@ -1,0 +1,12 @@
+[package]
+name = "axial-git"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+axial-core = { path = "../axial-core" }
+anyhow.workspace = true
+git2.workspace = true
+gix = "0.62"
+json-patch.workspace = true
+serde_json.workspace = true

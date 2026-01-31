@@ -1,0 +1,20 @@
+[package]
+name = "axial-command-center"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = "2.0.0-rc"
+
+[dependencies]
+tauri = { version = "2.0.0-rc", features = [] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+axial-core = { path = "../../../crates/axial-core" }
+axial-ledger = { path = "../../../crates/axial-ledger" }
+axial-router = { path = "../../../crates/axial-router" }
+tokio = { version = "1.36", features = ["full"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

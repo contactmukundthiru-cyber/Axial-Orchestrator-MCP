@@ -1,0 +1,31 @@
+{
+    "name": "AXIAL Profile C (GPU)",
+    "build": {
+        "dockerfile": "../base/Dockerfile",
+        "context": ".."
+    },
+    "remoteUser": "axial",
+    "hostRequirements": {
+        "gpu": "optional"
+    },
+    "runArgs": [
+        "--gpus", "all"
+    ],
+    "containerEnv": {
+        "NVIDIA_VISIBLE_DEVICES": "all",
+        "NVIDIA_DRIVER_CAPABILITIES": "compute,utility"
+    },
+    "features": {
+        "ghcr.io/devcontainers-contrib/features/nvidia-container-toolkit:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "tauri-apps.tauri-vscode"
+            ]
+        }
+    },
+    "forwardPorts": [1420, 11434, 3000, 8080],
+    "postCreateCommand": "scripts/post-create.sh"
+}
